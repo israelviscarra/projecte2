@@ -1,0 +1,65 @@
+<main class="flex-shrink-0 mb-5 mt-4">
+
+  <div class="container">
+    <div class="bg-dark p-2 rounded">
+      <p>{{txt}}</p>
+      <h1 style="color: white">Contactanos</h1>
+    </div>
+
+    <div class="container">
+      <form action="#">
+        <label for="fname">E-mail</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="usa">Spain</option>
+        </select>
+
+        <label for="subject">Comentario:</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Escribe tu duda..."
+          style="height:200px"
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+
+</main>
+
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;} * {box-sizing: border-box;}
+  input[type=text],input[type=email], select, textarea { width: 100%; padding:
+  12px; border-radius: 4px; box-sizing: border-box; margin-top: 6px;
+  margin-bottom: 16px; resize: vertical; } input[type=submit] {
+  background-color: #04AA6D; color: border: none; border-radius: 4px; cursor:
+  pointer; } input[type=submit]:hover { background-color: #45a049; } .container
+  { border-radius: 5px; padding: 20px; }
+</style>

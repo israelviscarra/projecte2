@@ -1,0 +1,34 @@
+<main class="flex-shrink-0 mb-5 mt-2">
+
+  <div class="container">
+    <div class="bg-light p-5 rounded">
+      <h1 class="d-flex justify-content-between">{{title}}
+        {{!-- <a href="/anadir_producte" class="btn btn-dark">Añadir</a> --}}
+
+      </h1>
+<div class="row row-cols-1 row-cols-md-4  g-4">
+        {{#if productes}}
+            {{#each productes}}
+                <div class="col">
+              <div class="card">
+                <img src="{{foto}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title d-flex justify-content-center">{{producte}}</h5>
+                  <hr>
+                  <p class="card-text">{{descripcio}}</p>
+                  <a href="#" class="btn btn-dark" onclick="comprar"()>Comprar</a>
+                  {{!-- <a href="/delete-item/{{@key}}" class="btn btn-danger" onclick="eliminar_producto"()>Delete</a> --}}
+                </div>
+              </div>
+              </div>
+
+            {{/each}}
+          </ul>
+        {{else}}
+         <p>no hay productos</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+</main>

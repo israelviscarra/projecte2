@@ -1,0 +1,79 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <div>
+              {{#if perms.no_admin}}
+                <div>
+                  Solo los administradores pueden entrar!
+                </div>
+              {{/if}}
+              <div class="card-body">
+                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                <p class="text-white-50 mb-2">Porfavor introduce nombre de
+                  usuario y contraseña!</p>
+
+                <form action="/login" method="post">
+                  <div class="form-group">
+                    <label class="col-form-label">Usuario</label>
+                    <input
+                      type="text"
+                      name="user"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group-prepend">
+                      <label class="col-form-label">Usuario</label>
+                    </div>
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  {{#if err.login_err}}
+                    <div class="alert alert-danger" role="alert">
+                      Invalid Credentials!
+                    </div>
+                  {{/if}}
+                  <br />
+                  <div class="form-group" style="text-align: center;">
+                    <input
+                      type="submit"
+                      name="btn"
+                      value="Login"
+                      class="btn btn-outline-light btn-lg px-5"
+                    />
+                  </div>
+                  <div
+                    class="d-flex justify-content-center text-center mt-4 pt-1"
+                  >
+                    <a href="#!" class="text-white"><i><img
+                          src="/assets/img/facebook.png"
+                          alt=""
+                        /></i></a>
+                    <a href="#!" class="text-white"><i><img
+                          src="/assets/img/twitter.png"
+                          alt=""
+                        /></i></a>
+                    <a href="#!" class="text-white"><i><img
+                          src="/assets/img/search.png"
+                          alt=""
+                        /></i></a>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

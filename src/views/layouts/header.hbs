@@ -1,0 +1,90 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <img src="https://firebasestorage.googleapis.com/v0/b/proyecte-gameshop.appspot.com/o/GameShop_Logo.png?alt=media&token=77a1089e-4c53-4be8-9942-123128f1e740" width="75px" height="75px" alt="">
+      <a class="navbar-brand" href="/">GameShop</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link {{#if active.Home}}active{{/if}}"id="hover" aria-current="page" href="/">Home</a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link  {{#if active.quienes_somos}}active{{/if}}" id="hover" aria-current="page" href="/quienes_somos">Quienes somos</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link {{#if active.Soporte}}active{{/if}}"id="hover" aria-current="page" href="/Soporte">Soporte</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link {{#if active.Tienda}}active{{/if}}"id="hover" aria-current="page" href="/Tienda">Tienda</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {{#if active.Contacte}}active{{/if}}"id="hover" aria-current="page" href="/contacte">Contacte</a>
+          </li>
+       </ul>
+            <li class="nav-item">
+          {{#if user.state}}
+            
+           {{#if user.type}}
+          <a href="/backend">
+          <input class="btn btn-success" type="button" value="Backend" style="margin-right: 10px;"/>
+          </a>
+           <a href="/login">
+          <input class="btn btn-danger" type="button" value="Loggout" onclick="logout()" />
+          </a>
+          {{else}}
+          <a href="/login">
+          <input class="btn btn-danger" type="button" value="Loggout" onclick="logout()" />
+          </a>
+          {{/if}}
+        {{else}}
+           <a href="/login">
+          <input class="btn btn-outline-success" type="button" value="Login" />
+          </a>
+          <a href="/registrar">
+          <input class="btn btn-outline-success" type="button" value="Registrar" />
+          </a>
+        {{/if}}
+
+          </li>
+      </div>
+    </div>
+  </nav>
+<style>
+  body{
+    background-image: url("https://wallpaperaccess.com/full/1567846.jpg");
+  }
+  .bg-dark {
+    background-color: #333742 !important;
+    }
+  .nav-link {
+     display: initial;
+     padding: 0px 10px;
+  }
+    #hover:hover {
+      color: rgb(255, 255, 255);
+      border-top: 2px rgb(255, 255, 255) solid;
+  }
+  #login{
+    padding: 8px;
+  }
+  .nav2{
+    padding: 10px 5px 0px 70%;
+    border: 1px solid black;
+    background-color: rgb(21, 25, 29);
+  }
+</style>
+
+</header>
